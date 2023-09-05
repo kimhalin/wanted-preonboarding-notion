@@ -1,5 +1,7 @@
-package com.example.wantedpreonboarding;
+package com.example.wantedpreonboarding.page.presentation;
 
+import com.example.wantedpreonboarding.page.dto.PageDto;
+import com.example.wantedpreonboarding.page.service.PageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +16,8 @@ public class PageController {
     private final PageService pageService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<PageDto> getPage(@PathVariable("id") Long id) {
+    public ResponseEntity<PageDto> getPage(@PathVariable("id") Long id) throws Exception{
         PageDto response = pageService.getPage(id);
-        if(response == null) throw new PageNotFoundException();
         return ResponseEntity.ok(response);
     }
 }

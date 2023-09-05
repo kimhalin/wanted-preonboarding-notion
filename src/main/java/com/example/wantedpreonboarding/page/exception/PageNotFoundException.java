@@ -1,4 +1,4 @@
-package com.example.wantedpreonboarding;
+package com.example.wantedpreonboarding.page.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 
