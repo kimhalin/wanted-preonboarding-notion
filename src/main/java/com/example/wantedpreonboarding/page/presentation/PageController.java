@@ -1,5 +1,7 @@
-package com.example.wantedpreonboarding;
+package com.example.wantedpreonboarding.page.presentation;
 
+import com.example.wantedpreonboarding.page.dto.PageDto;
+import com.example.wantedpreonboarding.page.service.PageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
